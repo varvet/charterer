@@ -12,7 +12,7 @@
 </div>
 <%= form_for @image, remote: true do |f| %>
   <%= f.hidden_field :tag_list %>
-  <%= render current_user.tags %>
+  <%= render Tag.default_tags %>
 <% end %>
 <%= link_to('Logga ut', destroy_user_session_path, method: :delete) %>
 <%= link_to('Visa statistik', user_path(current_user)) %>
