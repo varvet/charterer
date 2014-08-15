@@ -1,0 +1,18 @@
+<div class="images">
+  <div id="loading" class="active">
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+  </div>
+  <div id="image" class=""><div class="img" data-url="<%= @image.url %>"></div></div>
+</div>
+<%= form_for @image, remote: true do |f| %>
+  <%= f.hidden_field :tag_list %>
+  <%= render current_user.tags %>
+<% end %>
+<%= link_to('Logga ut', destroy_user_session_path, method: :delete) %>
+<%= link_to('Visa statistik', user_path(current_user)) %>

@@ -1,0 +1,10 @@
+#image {
+  display:none;
+  max-width:100%;
+  img {
+    width:100%;
+  }
+}
+#image.active {
+  display:block;
+}
